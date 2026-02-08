@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد ميلاد حبيبي</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #F7EFE5;
+            color: #3A3A3A;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 40px 20px 90px;
+            display: none;
+            position: relative;
+        }
+
+            section.active {
+                display: block;
+            }
+
+        h1, h2 {
+            color: #B76E79;
+        }
+
+        button {
+            background: #B76E79;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 500px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover {
+            position: absolute;
+            inset: 0;
+            background: #D8A7B1;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .card.revealed .cover {
+            display: none;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 18px;
+            width: 100%;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        /* قلوب */
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 20px;
+            animation: float 6s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio autoplay loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7c0d6dfe8f.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- الصفحة الأولى -->
+    <section class="active">
+        <h1>💖</h1>
+        <h2>
+            لحبيب العمر والأيام<br><br>
+            كل عام وانت شريكي<br>
+            كل عام وانت حبيبي<br><br>
+            سنين السعادة ترافقك<br>
+            والله يخليلينا لبعض
+        </h2>
+
+        <button onclick="next()">ابدأ الرحلة</button>
+        <div class="footer">بداية قصة ما كنت مخططلها… بس قلبي اختارك 🤍</div>
+    </section>
+
+    <!-- الذكريات -->
+    <section>
+        <h2>ذكرياتنا 💌</h2>
+
+        <div class="card">
+            <div class="cover">اسحب 💕</div>
+            <h3>5.8.2025</h3>
+            <p>
+                أول مرة حكينا مع بعض…
+                ما فكرت ولا للحظة إنو أول محادثة بينا توصل لهون
+                ما فكرت من موقف صار صدفة قبالي
+                وما إلي دخل فيه
+                غير إنو صاحبتي كانت قاعدة
+                ألاقي شريك عمري
+                ومن وقتها بلّش قلبي يختارك.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="cover">اسحب 😌</div>
+            <h3>موقف ما بنساه</h3>
+            <p>
+                اليوم الي غيرك
+                من زميل بالشغل
+                لحدا بفكر فيه بطريقة غير…
+                <br><br>
+                اليوم الي ما كان في حدا غير
+                أنا وإنت
+                عملنا مشروب صحي
+                زنجبيل وتفاح
+                ولا واحد فينا عارف شو عم يعمل
+                <br><br>
+                وبعدين إجت البنت الصغيرة
+                رابطة شعراتها
+                لابسة فستان جينس
+                نزلت عندها
+                عبطتها
+                وعطيتها شوكولاتة
+                <br><br>
+                وقتها…
+                تغيرت نظرتي إلك.
+                تغيرت كثير.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="cover">اسحب 💐</div>
+            <h3>23.12.2025</h3>
+            <p>
+                أول وردة منك
+                ما انبسطت بالوردة نفسها
+                قد ما انبسطت
+                إنك فكرت تبسطني
+                وفكرت شو الشي
+                الي ممكن يفرحني
+                بهاللحظة
+                أخدت قلبي كلو.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="cover">اسحب ❤️</div>
+            <h3>24.12.2025</h3>
+            <p>
+                أول مرة حكيتلي بحبك
+                كلمة صغيرة
+                بس أثرها بقلبي كان كبير
+                ومن وقتها
+                وأنا بعرف
+                إنو حبي إلك
+                إشي ثابت.
+            </p>
+        </div>
+
+        <button onclick="next()">كمّل 🤍</button>
+        <div class="footer">الموقع معمول عشان يذكرك إني بحبك كثير 🤍</div>
+    </section>
+
+    <!-- الديتات -->
+    <section>
+        <h2>أيامنا الحلوة 💑</h2>
+
+        <div class="card">
+            <div class="cover">اسحب ✨</div>
+            <h3>4.1.2026</h3>
+            <p>
+                أول صورة النا
+                وأول ديت
+                كان كثير ضغط
+                كثير حماس
+                خفت حتى أسلم عليك
+                أول مرة حدا يمسك إيدي
+                وكان أحلا شعور
+                <br><br>
+                لما قربت كرسيك على كرسيي
+                لأول مرة مسكت إيدي
+                وأنا أصلا مضغوطة
+                وبعدها بشوي حضنتني
+                حسيت حالي مالكة الدنيا
+                لما حكتلي عن القرش
+                وضحكنا عليه
+                كان يوم كثير حلو
+                وكان بكفيني وجودك فيه.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="cover">اسحب ❄️</div>
+            <h3>19.1.2026</h3>
+            <p>
+                الديت الثاني النا
+                كان مليااان حب
+                كل البرد الي كان برا
+                حضنك كان دافييييي
+                حسيت كل حب الدنيا
+                بقلبي إلك
+                كنت كثير مرتاحة
+                كثير مبسوطة
+                <br><br>
+                لما حكيتلي
+                لازم نشوف بعض
+                بمحل أقرب
+                عشان الطريق بعيد وصعب عليكي
+                فكرت
+                إذا بعد كل مرة بسوق
+                نكون هيك قراب من بعض
+                مستعدة
+                أسوق لعمر كلو.
+            </p>
+        </div>
+
+        <button onclick="next()">الأخير 🎂</button>
+        <div class="footer">كل ديت معك كان خطوة أقرب لقلبي 🤍</div>
+    </section>
+
+    <!-- الرسالة الختامية -->
+    <section>
+        <h2>رسالة إلك 🤍</h2>
+        <div class="card">
+            <p>
+                أسامة،
+                <br><br>
+                يمكن الموقع بسيط،
+                بس كل كلمة فيه طالعة من قلبي.
+                من أول صدفة جمعتنا
+                لكل لحظة حسّيت فيها بالأمان جنبك.
+                <br><br>
+                إنت مش بس حبيبي،
+                إنت راحتي وضحكتي،
+                والشخص اللي بختاره كل يوم من جديد.
+                <br><br>
+                عيدك معي،
+                وأنا بوعدك
+                أضل أحبك بطريقتي
+                وبقلبي كله 🤍
+                <br><br>
+                <strong>ياسمينتك… بتحبك كثير 🤍</strong>
+            </p>
+        </div>
+        <div class="footer">وأنا دايمًا رح أختارك 🤍</div>
+    </section>
+
+    <script>
+let current = 0;
+const sections = document.querySelectorAll('section');
+
+function next() {
+    sections[current].classList.remove('active');
+    current++;
+    sections[current].classList.add('active');
+}
+
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.add('revealed');
+    });
+});
+
+// قلوب
+setInterval(() => {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerText = '💗';
+    heart.style.left = Math.random() * 100 + 'vw';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}, 500);
+    </script>
+
+</body>
+</html>
